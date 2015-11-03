@@ -71,6 +71,10 @@ function render(cxt){
     var minutes=parseInt((curShowTimeSeconds-hours*3600-days*24*3600)/60);
     var seconds=curShowTimeSeconds%60;
 
+    var wdays=parseInt(days/10000);
+    var qdays=parseInt((days-wdays*10000)/1000);
+    var bdays=parseInt((days-wdays*10000-qdays*1000)/100);
+    var sdays=parseInt((days-wdays*10000-qdays*1000-bdays*100)/10);
 
 
     renderDigit(MARGIN_LEFT,MARGIN_TOP,parseInt(hours/10),cxt);
@@ -82,10 +86,10 @@ function render(cxt){
     renderDigit(MARGIN_LEFT+78*(RADIUS+1),MARGIN_TOP,parseInt(seconds/10),cxt);
     renderDigit(MARGIN_LEFT+93*(RADIUS+1),MARGIN_TOP,parseInt(seconds%10),cxt);
 
-    renderDigit(MARGIN_LEFT+0*(RADIUS+1),MARGIN_TOP+24*(RADIUS+1),parseInt(days/10000),cxt);
-    renderDigit(MARGIN_LEFT+15*(RADIUS+1),MARGIN_TOP+24*(RADIUS+1),parseInt(days/1000),cxt);
-    renderDigit(MARGIN_LEFT+30*(RADIUS+1),MARGIN_TOP+24*(RADIUS+1),parseInt(days/100),cxt);
-    renderDigit(MARGIN_LEFT+45*(RADIUS+1),MARGIN_TOP+24*(RADIUS+1),parseInt(days/10),cxt);
+    renderDigit(MARGIN_LEFT+0*(RADIUS+1),MARGIN_TOP+24*(RADIUS+1),parseInt(wdays),cxt);
+    renderDigit(MARGIN_LEFT+15*(RADIUS+1),MARGIN_TOP+24*(RADIUS+1),parseInt(qdays),cxt);
+    renderDigit(MARGIN_LEFT+30*(RADIUS+1),MARGIN_TOP+24*(RADIUS+1),parseInt(bdays),cxt);
+    renderDigit(MARGIN_LEFT+45*(RADIUS+1),MARGIN_TOP+24*(RADIUS+1),parseInt(sdays),cxt);
     renderDigit(MARGIN_LEFT+60*(RADIUS+1),MARGIN_TOP+24*(RADIUS+1),parseInt(days%10),cxt);
 
 

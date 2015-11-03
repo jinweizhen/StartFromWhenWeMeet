@@ -118,7 +118,27 @@ function renderDigit(x,y,num,cxt){
     }
 }
 
+function changeBackground(){
+    var daysNow=parseInt(curShowTimeSeconds/(3600*24));
+    if(daysNow=100){
+        var body=document.getElementsByTagName("body");
 
+        body[0].style.backgroundImage="url(img/tunnel_of_love-wallpaper-1366x768.jpg)";
+        body[0].style.backgroundPosition="center center";
+        body[0].style.backgroundRepeat="no-repeat";
+        body[0].style.backgroundSize="cover";
+
+    }else if(daysNow=200){
+
+        var body=document.getElementsByTagName("body");
+
+        body[0].style.backgroundImage="url(img/i_love_october-wallpaper-1280x800.jpg)";
+        body[0].style.backgroundPosition="center center";
+        body[0].style.backgroundRepeat="no-repeat";
+        body[0].style.backgroundSize="cover";
+    }
+
+}
 
 /**
  * Created by jinjin on 15/9/5.hello，mydear。。。

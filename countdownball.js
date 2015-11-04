@@ -120,7 +120,7 @@ function renderDigit(x,y,num,cxt){
 
 function changeBackground(){
     var daysNow=parseInt(curShowTimeSeconds/(3600*24));
-    if(daysNow=100){
+    if(daysNow==100){
         var body=document.getElementsByTagName("body");
 
         body[0].style.backgroundImage="url(img/tunnel_of_love-wallpaper-1366x768.jpg)";
@@ -128,7 +128,7 @@ function changeBackground(){
         body[0].style.backgroundRepeat="no-repeat";
         body[0].style.backgroundSize="cover";
 
-    }else if(daysNow=200){
+    }else if(daysNow==200){
 
         var body=document.getElementsByTagName("body");
 
